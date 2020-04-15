@@ -21,3 +21,8 @@ I intend to achieve the following in the course of the project:
 - [ ] Adhere to material design style guidlines
 - [ ] Write unit and UI tests for the project
 - [ ] Continually update read me
+
+## References
+1. [Migrate to Gradle Kotlin DSL in Four Steps](https://proandroiddev.com/migrate-to-gradle-kotlin-dsl-in-4-steps-f3e3b27e1f4d)
+2. [GitHub Actions for Android: First Approach](https://medium.com/@wkrzywiec/github-actions-for-android-first-approach-f616c24aa0f9)
+3. [Code Formatting in Kotlin using ktlint](https://blog.mindorks.com/code-formatting-in-kotlin-using-ktlint)
