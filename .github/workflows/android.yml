@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2.1.0
       - name: set up JDK 1.8
-      - with:
+        with:
           java-version: 1.8
       - name: Run Ktlint Check
         run: ./gradlew ktlintCheck
