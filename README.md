@@ -1,4 +1,4 @@
-#🚧 Work in progress 👷‍♀️⛏👷🔧️ ![Android CI](https://github.com/JabezNzomo99/android-playground/workflows/Android%20CI/badge.svg)
+# 🚧 Work in progress 👷‍♀️⛏👷🔧️ ![Android CI](https://github.com/JabezNzomo99/android-playground/workflows/Android%20CI/badge.svg)
 
 ## Background
 
