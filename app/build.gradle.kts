@@ -35,7 +35,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    (kotlinOptions as org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions).apply {
+    (kotlinOptions).apply {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
@@ -63,23 +63,22 @@ dependencies {
     api(Libraries.Navigation.navigationFragmentKtx)
     api(Libraries.Navigation.navigationUiKtx)
 
-    //Coroutines for asynchronous programming
+    // Coroutines for asynchronous programming
     api(Libraries.Coroutines.coroutinesLibrary)
     api(Libraries.Coroutines.coroutinesAndroidLibrary)
     api(Libraries.Coroutines.liveDataBuilder)
     api(Libraries.Coroutines.lifecycleScope)
 
-
-    //Room for offline storage
-    annotationProcessor(Libraries.Room.roomCompiler)
+    // Room for offline storage
+    kapt(Libraries.Room.roomCompiler)
     api(Libraries.Room.roomKtx)
     api(Libraries.Room.roomRuntime)
 
-    //Dependency Injection using Dagger
+    //  Dependency Injection using Dagger
     api(Libraries.Dagger.dagger)
-    annotationProcessor(Libraries.Dagger.daggerKapt)
+    kapt(Libraries.Dagger.daggerKapt)
 
-    //Networking Libraries
+    // Networking Libraries
     api(Libraries.Network.gsonConverter)
     api(Libraries.Network.loggingInterceptor)
     api(Libraries.Network.retrofit)

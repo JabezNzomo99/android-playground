@@ -34,11 +34,8 @@ class NewsRepositoryImpl @Inject constructor(
                 emit(UIState.Error(error))
             }
         }
-
     }
 
     override suspend fun getNewsBySection(section: String): LiveData<List<News>> =
         newsLocalDataSource.getNewsBySection(section = section)
-
-
 }

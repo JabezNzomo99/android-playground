@@ -16,5 +16,4 @@ interface BaseDao<T> {
 
     @Insert
     suspend fun insertAll(items: List<T>)
-
 }

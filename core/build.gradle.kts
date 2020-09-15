@@ -34,10 +34,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    (kotlinOptions as org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions).apply {
+    (kotlinOptions).apply {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-
 }
 
 dependencies {

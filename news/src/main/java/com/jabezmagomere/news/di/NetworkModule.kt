@@ -52,5 +52,4 @@ object NetworkModule {
     fun provideNewsApi(retrofit: Retrofit): NewsApi {
         return retrofit.create(NewsApi::class.java)
     }
-
 }
