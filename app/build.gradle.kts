@@ -16,7 +16,6 @@ android {
         targetSdkVersion(AndroidSdk.target)
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -48,10 +47,12 @@ android {
 }
 
 dependencies {
+    api("androidx.legacy:legacy-support-v4:1.0.0")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    api(project(BuildModules.Libraries.Core))
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
-    implementation(Libraries.ktxCore)
+    api(Libraries.ktxCore)
 
     api(Libraries.material)
     api(Libraries.constraintLayout)
@@ -65,15 +66,18 @@ dependencies {
     //Coroutines for asynchronous programming
     api(Libraries.Coroutines.coroutinesLibrary)
     api(Libraries.Coroutines.coroutinesAndroidLibrary)
+    api(Libraries.Coroutines.liveDataBuilder)
+    api(Libraries.Coroutines.lifecycleScope)
+
 
     //Room for offline storage
-    api(Libraries.Room.roomCompiler)
+    annotationProcessor(Libraries.Room.roomCompiler)
     api(Libraries.Room.roomKtx)
     api(Libraries.Room.roomRuntime)
 
     //Dependency Injection using Dagger
     api(Libraries.Dagger.dagger)
-    api(Libraries.Dagger.daggerKapt)
+    annotationProcessor(Libraries.Dagger.daggerKapt)
 
     //Networking Libraries
     api(Libraries.Network.gsonConverter)

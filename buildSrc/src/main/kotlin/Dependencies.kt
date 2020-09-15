@@ -38,6 +38,7 @@ object Libraries {
         const val interceptor = "4.5.0"
         const val okHttp = "4.5.0"
         const val dagger = "2.27"
+        const val ktxCoroutines = "2.2.0-alpha01"
     }
 
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
@@ -54,6 +55,10 @@ object Libraries {
             "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val coroutinesAndroidLibrary =
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        const val liveDataBuilder =
+            "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.ktxCoroutines}"
+        const val lifecycleScope =
+            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.ktxCoroutines}"
     }
 
     object Room {

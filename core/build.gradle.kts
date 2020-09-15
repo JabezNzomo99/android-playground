@@ -45,7 +45,9 @@ dependencies {
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
     implementation(Libraries.ktxCore)
-
+    implementation(Libraries.Room.roomRuntime)
+    implementation(Libraries.Room.roomKtx)
+    annotationProcessor(Libraries.Room.roomCompiler)
     testImplementation(TestLibraries.junit4)
     androidTestImplementation(TestLibraries.testRunner)
     androidTestImplementation(TestLibraries.espresso)
