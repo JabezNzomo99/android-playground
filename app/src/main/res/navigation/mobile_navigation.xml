@@ -3,23 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_news">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.jabezmagomere.playground.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_news"
+        android:name="com.jabezmagomere.news.ui.newslist.view.NewsFragment"
+        android:label="@string/title_news"
+        app:moduleName="news"
+        tools:layout="@layout/fragment_news" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.jabezmagomere.playground.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_entertainment"
+        android:name="com.jabezmagomere.entertainment.ui.EntertainmentFragment"
+        android:label="@string/title_entertainment"
+        app:moduleName="entertainment"
+        tools:layout="@layout/fragment_entertainment" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.jabezmagomere.playground.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_weather"
+        android:name="com.jabezmagomere.weather.ui.WeatherFragment"
+        android:label="@string/title_weather"
+        app:moduleName="weather"
+        tools:layout="@layout/fragment_weather" />
 </navigation>
