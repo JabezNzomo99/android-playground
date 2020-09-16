@@ -28,11 +28,11 @@ object Libraries {
     private object Versions {
         const val jetpack = "1.1.0"
         const val constraintLayout = "1.1.3"
-        const val ktxCore = "1.2.0"
+        const val ktxCore = "1.3.1"
         const val material = "1.1.0"
-        const val navigation = "2.2.1"
+        const val navigation = "2.3.0"
         const val lifecycle = "2.2.0"
-        const val coroutines = "1.3.5"
+        const val coroutines = "1.3.9"
         const val room = "2.2.5"
         const val retrofit = "2.8.1"
         const val interceptor = "4.5.0"
@@ -86,6 +86,8 @@ object Libraries {
         const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
         const val navigationFragment =
             "androidx.navigation:navigation-fragment:${Versions.navigation}"
+        const val dynamicNavigation =
+            "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navigation}"
         const val navigationFragmentKtx =
             "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     }

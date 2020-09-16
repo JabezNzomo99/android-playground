@@ -2,7 +2,7 @@
     package="com.jabezmagomere.entertainment">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_entertainment">
         <dist:delivery>
             <dist:install-time />
