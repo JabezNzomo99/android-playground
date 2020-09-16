@@ -16,5 +16,4 @@ internal class EntertainmentFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_entertainment, container, false)
     }
-
 }

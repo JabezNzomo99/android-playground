@@ -52,7 +52,7 @@ dependencies {
     api(project(BuildModules.Libraries.Core))
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.appCompat)
-    //Feature Module Navigation
+    // Feature Module Navigation
     implementation(Libraries.Navigation.dynamicNavigation)
     api(Libraries.ktxCore)
 
