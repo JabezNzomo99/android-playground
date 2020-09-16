@@ -1,2 +1,6 @@
 rootProject.name='Playground'
 include ':app'
+include ':news'
+include ':weather'
+include ':entertainment'
+include ':core'
