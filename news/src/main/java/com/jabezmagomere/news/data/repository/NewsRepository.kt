@@ -7,9 +7,9 @@ import com.jabezmagomere.core.ui.UIState
 import com.jabezmagomere.news.data.local.datasource.NewsLocalDataSource
 import com.jabezmagomere.news.data.local.model.News
 import com.jabezmagomere.news.data.remote.NewsRemoteDataSource
+import javax.inject.Inject
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
-import javax.inject.Inject
 
 interface NewsRepository {
     suspend fun fetchRemoteNews(section: String): LiveData<UIState>
