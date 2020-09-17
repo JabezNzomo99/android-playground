@@ -1,6 +1,7 @@
 package com.jabezmagomere.news.data.remote.model
 
 data class Fields(
-    val thumbnail: String,
-    val wordcount: String
+    val thumbnail: String?,
+    val wordcount: String?,
+    val trailText: String?
 )

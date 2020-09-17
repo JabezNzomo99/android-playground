@@ -1,6 +1,12 @@
 package com.jabezmagomere.news.di
 
-import dagger.Module
+import com.jabezmagomere.news.ui.newslist.viewmodel.NewsViewModel
+import org.koin.android.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
-@Module
-object ViewModelModule
+
+val viewModelModule = module {
+    viewModel {
+        NewsViewModel(get())
+    }
+}

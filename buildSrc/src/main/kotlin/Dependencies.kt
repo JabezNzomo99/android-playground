@@ -15,11 +15,10 @@ object BuildPlugins {
     const val kapt = "kotlin-kapt"
     const val androidLibraryPlugin = "com.android.library"
     const val dynamicFeaturePlugin = "com.android.dynamic-feature"
-
 }
 
 object AndroidSdk {
-    const val min = 15
+    const val min = 21
     const val compile = 29
     const val target = compile
 }
@@ -37,8 +36,11 @@ object Libraries {
         const val retrofit = "2.8.1"
         const val interceptor = "4.5.0"
         const val okHttp = "4.5.0"
-        const val dagger = "2.27"
         const val ktxCoroutines = "2.2.0-alpha01"
+        const val koin = "2.1.4"
+        const val chucker = "3.2.0"
+        const val coil = "0.13.0"
+        const val stetho = "1.5.1"
     }
 
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
@@ -47,6 +49,8 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktxCore}"
     const val material = "com.google.android.material:material:${Versions.material}"
+    const val coil = "io.coil-kt:coil:${Versions.coil}"
+    const val stetho = "com.facebook.stetho:stetho:${Versions.stetho}"
     const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     const val vectorDrawable = "androidx.vectordrawable:vectordrawable:${Versions.jetpack}"
 
@@ -76,9 +80,17 @@ object Libraries {
         const val okHttp3 = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
     }
 
-    object Dagger {
-        const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
-        const val daggerKapt = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    object Chucker {
+        const val debug = "com.github.chuckerteam.chucker:library:${Versions.chucker}"
+        const val release = "com.github.chuckerteam.chucker:library-no-op:${Versions.chucker}"
+    }
+
+    object Koin {
+        const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
+        const val koinScope = "org.koin:koin-android-scope:${Versions.koin}"
+        const val koinViewModel = "org.koin:koin-android-viewmodel:${Versions.koin}"
+        const val koinExt = "org.koin:koin-android-ext:${Versions.koin}"
+        const val koinCore = "org.koin:koin-core:${Versions.koin}"
     }
 
     object Navigation {
@@ -90,6 +102,12 @@ object Libraries {
             "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navigation}"
         const val navigationFragmentKtx =
             "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    }
+
+    object LifeCycleExt {
+        const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+
     }
 
 }

@@ -47,6 +47,23 @@ dependencies {
     implementation(Libraries.Room.roomRuntime)
     implementation(Libraries.Room.roomKtx)
     kapt(Libraries.Room.roomCompiler)
+
+    // Koin
+    implementation(Libraries.Koin.koinAndroid)
+    implementation(Libraries.Koin.koinExt)
+    implementation(Libraries.Koin.koinScope)
+    implementation(Libraries.Koin.koinViewModel)
+
+    // Networking Libraries
+    implementation(Libraries.Network.gsonConverter)
+    implementation(Libraries.Network.loggingInterceptor)
+    implementation(Libraries.Network.retrofit)
+    implementation(Libraries.Network.okHttp3)
+
+    // Chucker Network Interceptor
+    debugImplementation(Libraries.Chucker.debug)
+    releaseImplementation(Libraries.Chucker.release)
+
     testImplementation(TestLibraries.junit4)
     androidTestImplementation(TestLibraries.testRunner)
     androidTestImplementation(TestLibraries.espresso)

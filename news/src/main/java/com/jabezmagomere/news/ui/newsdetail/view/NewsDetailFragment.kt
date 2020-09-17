@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.jabezmagomere.news.R
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class NewsDetailFragment : Fragment() {
 
     override fun onCreateView(

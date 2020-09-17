@@ -76,15 +76,24 @@ dependencies {
     api(Libraries.Room.roomKtx)
     api(Libraries.Room.roomRuntime)
 
-    //  Dependency Injection using Dagger
-    api(Libraries.Dagger.dagger)
-    kapt(Libraries.Dagger.daggerKapt)
+    // Koin
+    api(Libraries.Koin.koinAndroid)
+    api(Libraries.Koin.koinExt)
+    api(Libraries.Koin.koinScope)
+    api(Libraries.Koin.koinViewModel)
 
     // Networking Libraries
     api(Libraries.Network.gsonConverter)
     api(Libraries.Network.loggingInterceptor)
     api(Libraries.Network.retrofit)
     api(Libraries.Network.okHttp3)
+
+    // Lifecycle Extensions
+    api(Libraries.LifeCycleExt.liveData)
+    api(Libraries.LifeCycleExt.viewModel)
+
+    // Stetho for debugging
+    implementation(Libraries.stetho)
 
     testImplementation(TestLibraries.junit4)
     androidTestImplementation(TestLibraries.testRunner)

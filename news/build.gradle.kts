@@ -1,5 +1,5 @@
 import java.io.FileInputStream
-import java.util.Properties
+import java.util.*
 
 plugins {
     id(BuildPlugins.dynamicFeaturePlugin)
@@ -26,9 +26,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation(project(BuildModules.Libraries.App))
+    implementation(Libraries.coil)
+    kapt(Libraries.Room.roomCompiler)
 }

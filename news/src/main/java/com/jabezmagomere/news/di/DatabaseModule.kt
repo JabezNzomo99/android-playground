@@ -1,22 +1,18 @@
 package com.jabezmagomere.news.di
 
-import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.jabezmagomere.news.data.local.NewsDatabase
-import dagger.Module
-import dagger.Provides
+import com.jabezmagomere.news.data.local.dao.NewsDao
+import org.koin.android.ext.koin.androidContext
+import org.koin.dsl.module
 
-@Module
-object DatabaseModule {
+val databaseModule = module {
+    fun provideNewsDatabase(context: Context): NewsDatabase =
+        Room.databaseBuilder(context, NewsDatabase::class.java, "news.db").build()
 
-    @Provides
-    @NewsScope
-    fun provideNewsDatabase(application: Application): NewsDatabase {
-        return Room.databaseBuilder(application.baseContext, NewsDatabase::class.java, "news.db")
-            .build()
-    }
+    fun provideNewsDao(database: NewsDatabase): NewsDao = database.newsDao()
 
-    @Provides
-    @NewsScope
-    fun provideNewsDao(newsDatabase: NewsDatabase) = newsDatabase.newsDao()
+    single { provideNewsDatabase(androidContext()) }
+    single { provideNewsDao(get()) }
 }

@@ -4,19 +4,14 @@ import com.jabezmagomere.news.data.local.datasource.NewsLocalDataSource
 import com.jabezmagomere.news.data.remote.NewsRemoteDataSource
 import com.jabezmagomere.news.data.repository.NewsRepository
 import com.jabezmagomere.news.data.repository.NewsRepositoryImpl
-import dagger.Binds
-import dagger.Module
+import org.koin.dsl.module
 
-@Module
-object RepositoryModule {
-
-    @Binds
-    @NewsScope
+val repositoryModule = module {
     fun provideNewsRepository(
         newsLocalDataSource: NewsLocalDataSource,
         newsRemoteDataSource: NewsRemoteDataSource
-    ): NewsRepository = NewsRepositoryImpl(
-        newsLocalDataSource = newsLocalDataSource,
-        newsRemoteDataSource = newsRemoteDataSource
-    )
+    ): NewsRepository = NewsRepositoryImpl(newsLocalDataSource, newsRemoteDataSource)
+    single {
+        provideNewsRepository(get(), get())
+    }
 }

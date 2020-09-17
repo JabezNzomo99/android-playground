@@ -1,11 +1,12 @@
 package com.jabezmagomere.news.data.local.model
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "News")
+@Entity(tableName = "News", indices = [Index(value = ["id"], unique = true)])
 data class News(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val newsId: Int = 0,
     val apiUrl: String?,
     val thumbnail: String?,
@@ -17,5 +18,6 @@ data class News(
     val type: String?,
     val webPublicationDate: String?,
     val webTitle: String?,
-    val webUrl: String?
+    val webUrl: String?,
+    val trailText: String?
 )
